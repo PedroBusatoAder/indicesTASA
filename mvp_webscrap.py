@@ -18,7 +18,7 @@ if req_response.status_code == 200:
             moneda_compra_venta = tr_element.find_all("td", limit=3)
             dolar_dic = {
                 "moneda": moneda_compra_venta[0].text.strip(),
-                "compra": moneda_compra_venta[1].text.strip() #.replace(',', '.'),
+                "compra": moneda_compra_venta[1].text.strip(), #.replace(',', '.'),
                 "venta": moneda_compra_venta[2].text.strip()  #.replace(',', '.')
             }
             break

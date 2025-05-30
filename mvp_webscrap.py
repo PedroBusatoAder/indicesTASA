@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1UP7kq0rnpY0T9T9z1Z-4-9pqQm-k0eQc
 """
 
-!pip3 install beautifulsoup4
-!pip install openpyxl
+# !pip3 install beautifulsoup4
+# !pip install openpyxl
 
 import pandas as pd
 import requests as req

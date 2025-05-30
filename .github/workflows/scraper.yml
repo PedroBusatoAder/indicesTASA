@@ -27,4 +27,4 @@ jobs:
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       run: |
-        python mvp_webscraper.py
+        python mvp_webscrap.py

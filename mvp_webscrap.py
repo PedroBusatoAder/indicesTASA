@@ -18,7 +18,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 import os
 import openpyxl as opyxl
-from google.colab import drive
 from datetime import datetime
 
 # url = "https://www.bna.com.ar/Personas"

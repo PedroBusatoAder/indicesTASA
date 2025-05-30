@@ -46,7 +46,7 @@ while hoja.cell(fila, 6).value:
     fila += 1
 
 # Actualizamos las celdas de la fila encontrada
-fecha = datetime.now().strftime("%Y-%m-%d")
+fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 hoja.update_cell(fila, 6, fecha)               # F - Fecha
 hoja.update_cell(fila, 7, dolar_dic["venta"])  # G - Venta
 hoja.update_cell(fila, 10, dolar_dic["compra"]) # J - Compra

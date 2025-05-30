@@ -94,8 +94,14 @@ else:
 
 # === CONEXIÓN CON GOOGLE SHEETS ===
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-credenciales = ServiceAccountCredentials.from_json_keyfile_name("credenciales.json", scope)
-cliente = gspread.authorize(credenciales)
+#credenciales = ServiceAccountCredentials.from_json_keyfile_name("credenciales.json", scope)
+#cliente = gspread.authorize(credenciales)
+
+credenciales_json = os.environ["GOOGLE_CREDENTIALS"]
+credenciales_dict = json.loads(credenciales_json)
+credenciales = ServiceAccountCredentials.from_json_keyfile_dict(credenciales_dict, scope)
+
+gc = gspread.authorize(credenciales)
 
 # Abre la hoja
 spreadsheet = cliente.open_by_key("1jio09_eyPVeRk5ass-YV8eBouMIjLY8PTDAUq9xu-ts")
